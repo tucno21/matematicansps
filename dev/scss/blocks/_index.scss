@@ -1,5 +1,5 @@
 /*EL LOGO DE APRENDO EN CASA Y LA PRESENTACION*/
-.main-container{ 
+.header-container{ 
     height: 95vh;
     display:flex;
     flex-direction: column;
@@ -9,21 +9,22 @@
 
 
 .presentation{
-    padding: 2rem 2rem;
     font-size: 1.5rem;
     text-align: center;
 
+    &__paragraph{
+        margin:2rem 0;
+    }
+
     &__img{
-        margin-top: 5rem;
         width: calc(100% - 10%);
     }
 
     @include laptop{
             font-size: 2rem;
-            padding: 2rem 3rem;
         
             &__img{
-                width: calc(100% - 50%);
+                width: calc(100% - 60%);
             }
         }
 }
@@ -53,9 +54,16 @@
     @include laptop{
         flex-direction: row;
 
+
         &__boton{
             width:18rem;
             padding: 2rem;
+
+            @include laptop{
+                &:hover{
+                    background-color:$black;
+                }
+            }
         }
     }
 }
