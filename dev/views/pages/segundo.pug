@@ -1,0 +1,64 @@
+extends ../templates/template
+
+block nav
+    include ../includes/navegador
+
+block header
+    .header__title Sesiones de matemática 2do
+    .header__paragraph Buen dia señorita y/o joven en esta página esta las sesiones de matemática para los que no participaron opertunamente en las sesiones, esta organizado por mes, semana y sesiones.
+
+block main
+    .main__container
+
+        // MAYO
+        .months 
+            h3.months__title Abril
+            section.semana#semana1
+                a.semana__btn(href="#semana1") Semana 1
+                .semana__smenu
+                    //SESION1
+                    h4.semana__sesion Sesión 1
+                    p.semana__title Recopilamos datos sobre la participación democrática en nuestra familia 
+                    iframe.semana__video(src='https://docs.google.com/viewer?srcid=13QuP7zpfzvmurxu8wWCpOhf2wl20xBG9&pid=explorer&efh=false&a=v&chrome=false&embedded=true')
+                    a.semana__descarga(href="https://docs.google.com/uc?export=download&id=13QuP7zpfzvmurxu8wWCpOhf2wl20xBG9") Descargar Archivo pdf
+                    //- p.semana__title Reto
+                    p.semana__title El reto esta dentro del archivo PDF
+
+                    //SESION2
+                    h4.semana__sesion Sesión 2
+                    p.semana__title Organizamos Los Datos De La Primera Pregunta De La Encuesta En Una Tabla De Frecuencias 
+                    iframe.semana__video(src='https://drive.google.com/file/d/1GT55I7jHvRTab43ORL7L0Lzme4msPC21/preview' frameborder='0' allow='accelerometer; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                    a.semana__descarga(href="https://docs.google.com/uc?export=download&id=1GT55I7jHvRTab43ORL7L0Lzme4msPC21") Descargar Video
+                    //- p.semana__title Reto
+                    img.semana__img(src="assets/img/retos/segundo/sem1-s1a.jpg" alt="retos de la semana")
+
+            section.semana#semana2
+                a.semana__btn(href="#semana2") Semana 2
+                .semana__smenu
+                    //SESION1
+                    h4.semana__sesion Sesión 1
+                    p.semana__title ¿Cómo recopilar información y tomar decisiones para una participación democrática? 
+                    iframe.semana__video(src='https://drive.google.com/file/d/1zhz_ke8cgZO-5StcLMDqKEQ6rxBF9aHt/preview' frameborder='0' allow='accelerometer; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                    a.semana__descarga(href="https://docs.google.com/uc?export=download&id=1zhz_ke8cgZO-5StcLMDqKEQ6rxBF9aHt") Descargar Video
+                    iframe.semana__video(src='https://drive.google.com/file/d/1K3UfMliNLtDd5LPFsEaiTn6srgSsMsN0/preview' frameborder='0' allow='accelerometer; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                    a.semana__descarga(href="https://docs.google.com/uc?export=download&id=1K3UfMliNLtDd5LPFsEaiTn6srgSsMsN0") Descargar Video
+                    //- p.semana__title Reto
+                    img.semana__img(src="assets/img/retos/segundo/sem2-s1a.jpg" alt="retos de la semana")
+
+            section.semana#semana3
+                a.semana__btn(href="#semana3") Semana 3
+                .semana__smenu
+                    //SESION1
+                    h4.semana__sesion Sesión 1
+                    p.semana__title Elaboramos gráficos estadísticos Sobre la participación democrática En nuestra familia 
+                    iframe.semana__video(src='https://drive.google.com/file/d/1M0cLkg9cTatK3sNFSwkb4Pzn1W7-GGUI/preview' frameborder='0' allow='accelerometer; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+                    a.semana__descarga(href="https://docs.google.com/uc?export=download&id=1M0cLkg9cTatK3sNFSwkb4Pzn1W7-GGUI") Descargar Video
+                    //- p.semana__title Reto
+                    img.semana__img(src="assets/img/retos/segundo/sem3-s1a.jpg" alt="retos de la semana")
+
+
+
+
+
+block footer
+    include ../includes/footer

@@ -1,0 +1,61 @@
+/*EL LOGO DE APRENDO EN CASA Y LA PRESENTACION*/
+.main-container{ 
+    height: 95vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.presentation{
+    padding: 2rem 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+
+    &__img{
+        margin-top: 5rem;
+        width: calc(100% - 10%);
+    }
+
+    @include laptop{
+            font-size: 2rem;
+            padding: 2rem 3rem;
+        
+            &__img{
+                width: calc(100% - 50%);
+            }
+        }
+}
+
+
+
+.btnGrado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    &__boton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:$green;
+        width:80vw;
+        border-radius: 1rem;
+        text-decoration: none;
+        color: $white;
+        font-size:3rem;
+        padding: 2.5rem 0;
+    }
+
+    @include laptop{
+        flex-direction: row;
+
+        &__boton{
+            width:18rem;
+            padding: 2rem;
+        }
+    }
+}

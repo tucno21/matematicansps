@@ -1,0 +1,20 @@
+@import "config/fonts";
+@import "config/color";
+
+@import "mixins/breakpoints";
+@import "mixins/reset-list";
+
+@import "base/base";
+@import "base/normalize";
+
+
+
+@import "blocks/navegador";
+@import "blocks/modoOscuro";
+@import "blocks/index";
+@import "blocks/header";
+@import "blocks/grados";
+
+
+@import "blocks/footer";
+

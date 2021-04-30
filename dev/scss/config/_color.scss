@@ -1,0 +1,19 @@
+:root{
+    --green:#10AC84;
+    --black: #222F3E;
+    --white:#C8D6E5;
+    --blue:#2E86DE;
+    --green-boton-a:rgba(0, 148, 50,1.0);
+    --green-boton-a-lite:rgba(0, 148, 50,.3);
+    --green-boton-b:rgba(0, 98, 102,1.0);
+    --green-boton-b-lite:rgba(0, 98, 102,.3);
+}
+
+$green:var(--green);
+$black: var(--black);
+$white:var(--white);
+$blue:var(--blue);
+$green-boton-a:var(--green-boton-a);
+$green-boton-a-lite:var(--green-boton-a-lite);
+$green-boton-b:var(--green-boton-b);
+$green-boton-b-lite:var(--green-boton-b-lite);

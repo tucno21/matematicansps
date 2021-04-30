@@ -1,0 +1,27 @@
+/*FOOTER*/
+.footer{
+    height: 4rem;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 100;
+}
+
+.footer__whatsapp{
+    position: fixed;
+    cursor: pointer;
+    right: 2rem;
+    bottom: 1.8rem;
+    filter: drop-shadow( 2px 2px 8px rgba(0, 0, 0, .7));
+    &:hover{
+            filter: drop-shadow( 5px 5px 8px rgba(0, 0, 0, .7));
+        }
+        & img{
+        width: 5.5rem;
+    }
+}
