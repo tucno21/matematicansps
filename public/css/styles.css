@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800&display=swap");
-:root { --green:#10AC84; --black: #222F3E; --white:#C8D6E5; --blue:#2E86DE; --green-boton-a:rgba(0, 148, 50,1.0); --green-boton-a-lite:rgba(0, 148, 50,.3); --green-boton-b:rgba(0, 98, 102,1.0); --green-boton-b-lite:rgba(0, 98, 102,.3); }
+:root { --green:#B53471; --black: #222F3E; --white:#C8D6E5; --blue:#2E86DE; --green-boton-a:rgba(0, 148, 50,1.0); --green-boton-a-lite:rgba(0, 148, 50,.3); --green-boton-b:rgba(0, 98, 102,1.0); --green-boton-b-lite:rgba(0, 98, 102,.3); }
 
 html { font-size: 62.5%; padding: 0; box-sizing: border-box; font-family: 'Kanit', sans-serif; }
 
