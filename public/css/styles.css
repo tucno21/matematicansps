@@ -185,43 +185,34 @@ template { display: none; }
 .header__paragraph { font-size: 2rem; }
 
 /* MAIN */
+/*=========================*/
+/* MAIN */
 /*seciones de meses y semanas*/
-.main__container { padding: 0 2rem; display: flex; flex-direction: column; align-items: center; }
+.main__container { display: grid; grid-template-columns: repeat(1, 1fr); gap: 2.5rem; padding: 5rem; }
 
-.months { text-align: center; margin: 2rem 0; }
+.months { /* margin: 1rem; */ overflow: hidden; border-radius: 1.5rem; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
-@media screen and (min-width: 1024px) { .months { width: 70%; } }
+.months__btn { display: grid; place-content: center; padding: 2rem 0; background-color: var(--green); color: var(--white); position: relative; font-size: 2.5rem; font-weight: bold; letter-spacing: .3rem; border-radius: 1.5rem 1.5rem 0 0; z-index: 1; }
 
-.months__title { font-size: 2.5rem; padding: 1rem 0; text-transform: uppercase; background-color: #1289A7; letter-spacing: .3rem; color: var(--white); border-radius: 1rem 1rem 0 0; border-bottom: 2px solid var(--black); }
+.months__btn:hover { color: var(--black); }
 
-.semana { overflow: hidden; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+.months__smenu { background-color: var(--black); position: relative; overflow: hidden; transition: max-height .3s; max-height: 0; transition: max-height .6s; }
 
-.semana__btn { display: grid; place-content: center; background-color: var(--green); color: var(--white); position: relative; padding: 1.6rem 0; font-size: 2.5rem; border-bottom: 2px solid var(--black); }
+.months__link { display: block; padding: 16px 26px; color: var(--white); font-size: 14px; margin: .4rem 0; position: relative; font-size: 2rem; }
 
-.semana__btn:hover { color: var(--black); }
+.months__link::before { content: ""; position: absolute; width: 6px; height: 100%; background-color: var(--green); left: 0; top: 0; transition: .3s; opacity: 0; }
 
-.semana__smenu { background-color: var(--black); position: relative; overflow: hidden; max-height: 0; transition: max-height .6s; }
+.months__link:hover::before { opacity: 1; }
 
-.semana__contenido { display: block; padding: 1rem 0; color: var(--white); font-size: 1rem; margin: .4rem 0; position: relative; font-size: 2rem; }
+.months__link span { color: #f39c12; }
 
-.semana__sesion, .semana__title, .semana__descarga { color: var(--white); font-size: 2rem; display: block; }
+.months:target .months__smenu { max-height: 40rem; }
 
-.semana__sesion { color: #f39c12; font-size: 2.6rem; margin-top: 1.5rem; }
+.months:target .months__btn { color: var(--black); }
 
-.semana__descarga:hover { color: #f39c12; }
+@media (min-width: 768px) { .main__container { grid-template-columns: repeat(2, 1fr); gap: 3.5rem; padding: 5rem 7rem; } }
 
-.semana__video { width: 98%; height: 22rem; }
-
-@media screen and (min-width: 1024px) { .semana__video { width: 60%; height: 35rem; } }
-
-.semana__img { width: 90%; }
-
-@media screen and (min-width: 1024px) { .semana__img { width: 50%; } }
-
-.semana:target .semana__smenu { max-height: 300rem; }
-
-.semana:target .semana__btn { color: var(--black); }
-
+/*seciones de meses y semanas*/
 /*FOOTER*/
 .footer { height: 5vh; width: 100%; background-color: var(--black); color: var(--white); display: flex; align-items: center; justify-content: center; position: relative; font-size: 1.5rem; z-index: 100; }
 
