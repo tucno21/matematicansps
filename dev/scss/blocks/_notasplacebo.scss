@@ -1,0 +1,134 @@
+.registroNotas{
+    
+    &__title{
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+.datosEstudiante{
+
+    &__title{
+        font-size: 2rem;
+        padding:1rem;
+        text-align: center;
+    }
+
+    &__box{
+        margin: 0 auto;
+        display: flex;
+        align-items:center;
+        width: 90vw;
+        text-align: center;
+        
+        & p{
+            font-size: 1.5rem;
+            width:45%;
+            border: 1px solid $green;
+            text-align: center;
+        }
+        @include laptop{
+            width: 50vw;
+        }
+    }
+
+
+}
+
+.NotasSiagie{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    
+    &__title{
+        font-size: 2rem;
+        padding:1rem;
+        text-align: center;
+    }
+
+    &__box{
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        align-items:center;
+        width: 90vw;
+
+        & p{
+            text-align: center;
+            font-size: 1.7rem;
+            width:45%;
+            border: 1px solid $green;
+        }
+
+        &--competencia{
+            display: block;
+
+            & h5{
+                font-size: 1.2rem;
+                font-weight: 300;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        @include laptop{
+            width: 50vw;
+        }
+    }
+}
+
+.datosResultados__container{
+    text-align: center;
+    display: grid;
+
+    @include laptop{
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+.datosResultados{
+    // display: flex;
+    // flex-direction: column;
+    text-align: center;
+
+    &__title{
+        text-align: center;
+        font-size: 2rem;
+        padding-top:1.5rem;
+    }
+
+    &__box{
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        align-items:center;
+        width: 90vw;
+
+        & p{
+            text-align: center;
+            font-size: 1.5rem;
+            width:45%;
+            border: 1px solid $green;
+            padding: .3rem 0;
+        }
+
+        @include laptop{
+            width: 20vw;
+            width: 80%;
+        }
+    }
+}
+
+
+
+
+
+
+.resaltar__color{
+    background-color:$green;
+
+    & p{
+        border:1px solid $black;
+    }
+}

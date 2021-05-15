@@ -1,0 +1,254 @@
+extends ../templates/template
+
+block header
+    .registroNotas
+        h2.registroNotas__title Información de entrega de evidencias en el area de Matemática 2021
+
+        .datosEstudiante
+            h4.datosEstudiante__title Estudiante
+            .datosEstudiante__box
+                p.resaltar__color N° DNI
+                P <?= dni.toUpperCase() ?>
+            .datosEstudiante__box
+                P.resaltar__color NOMBRES
+                P <?= nombre.toUpperCase() ?>
+            .datosEstudiante__box
+                P.resaltar__color APELLIDOS
+                P <?= datoApellido ?>
+
+        .NotasSiagie
+            h4.NotasSiagie__title Notas de Matematica 2020
+            .NotasSiagie__box.resaltar__color
+                p C1
+                p C2
+                p C3
+                p C4 
+            .NotasSiagie__box
+                p 15
+                p 16
+                p 17
+                p 18
+            .NotasSiagie__box.NotasSiagie__box--competencia
+                h5 C1: Resuelve problemas de cantidad 
+                h5 C2: Resuelve problemas de regularidad, equivalencia y cambio 
+                h5 C3: Resuelve problemas de forma, movimiento y localización 
+                h5 C4: Resuelve problemas de gestión de datos e incertidumbre
+
+        .datosEstudiante
+            h4.datosEstudiante__title Descripción
+            .datosEstudiante__box
+                p.resaltar__color "X":
+                P Envio la evidencia
+            .datosEstudiante__box
+                P.resaltar__color "¿"
+                P NO Envio
+            .datosEstudiante__box
+                P.resaltar__color "-"
+                P Sin sesión
+
+        .datosResultados__container
+            .datosResultados    <!-- abril -->
+                h4.datosResultados__title MES: Abril
+                .datosResultados__box.resaltar__color
+                    p 
+                    p SEM-1
+                    p SEM-2
+                    p SEM-3 
+                    p SEM-4 
+                .datosResultados__box
+                    p sesión-1
+                    p <?= datoS1S1 ?>
+                    p <?= datoS2S1 ?>
+                    p <?= datoS3S1 ?>
+                    p <?= datoS4S1 ?>
+                .datosResultados__box
+                    p sesión-2
+                    p <?= datoS1S2 ?>
+                    p <?= datoS2S2 ?>
+                    p <?= datoS3S2 ?>
+                    p <?= datoS4S2 ?>
+
+            .datosResultados    <!-- mayo -->
+                h4.datosResultados__title MES: Mayo
+                .datosResultados__box.resaltar__color
+                    p 
+                    p SEM-5
+                    p SEM-6
+                    p SEM-7 
+                    p SEM-8
+                .datosResultados__box
+                    p sesión-1
+                    p <?= datoS5S1 ?>
+                    p <?= datoS6S1 ?>
+                    p <?= datoS7S1 ?>
+                    p <?= datoS8S1 ?>
+                .datosResultados__box
+                    p sesión-2
+                    p <?= datoS5S2 ?>
+                    p <?= datoS6S2 ?>
+                    p <?= datoS7S2 ?>
+                    p <?= datoS8S2 ?>
+
+            .datosResultados    <!-- junio -->
+                h4.datosResultados__title MES: Junio
+                .datosResultados__box.resaltar__color
+                    p 
+                    p SEM-9
+                    p SEM-10
+                    p SEM-11 
+                    p SEM-12 
+                    p SEM-13 
+                .datosResultados__box
+                    p sesión-1
+                    p <?= datoS9S1 ?>
+                    p <?= datoS10S1 ?>
+                    p <?= datoS11S1 ?>
+                    p <?= datoS12S1 ?>
+                    p <?= datoS13S1 ?>
+                .datosResultados__box
+                    p sesión-2
+                    p <?= datoS9S2 ?>
+                    p <?= datoS10S2 ?>
+                    p <?= datoS11S2 ?>
+                    p <?= datoS12S2 ?>
+                    p <?= datoS13S2 ?>
+
+            .datosResultados    <!-- julio -->
+                h4.datosResultados__title MES: Julio
+                .datosResultados__box.resaltar__color
+                    p 
+                    p SEM-14
+                    p SEM-15
+                    p SEM-16 
+                    p SEM-17 
+                .datosResultados__box
+                    p sesión-1
+                    p <?= datoS14S1 ?>
+                    p <?= datoS15S1 ?>
+                    p <?= datoS16S1 ?>
+                    p <?= datoS17S1 ?>
+                .datosResultados__box
+                    p sesión-2
+                    p <?= datoS14S2 ?>
+                    p <?= datoS15S2 ?>
+                    p <?= datoS16S2 ?>
+                    p <?= datoS17S2 ?>
+
+            .datosResultados    <!-- agosto -->
+                h4.datosResultados__title MES: Agosto
+                .datosResultados__box.resaltar__color
+                    p 
+                    p SEM-18
+                    p SEM-19
+                    p SEM-20 
+                    p SEM-21 
+                .datosResultados__box
+                    p sesión-1
+                    p <?= datoS18S1 ?>
+                    p <?= datoS19S1 ?>
+                    p <?= datoS20S1 ?>
+                    p <?= datoS21S1 ?>
+                .datosResultados__box
+                    p sesión-2
+                    p <?= datoS18S2 ?>
+                    p <?= datoS19S2 ?>
+                    p <?= datoS20S2 ?>
+                    p <?= datoS21S2 ?>
+
+            .datosResultados    <!-- setiembre -->
+                h4.datosResultados__title MES: Septiembre
+                .datosResultados__box.resaltar__color
+                    p 
+                    p SEM-22
+                    p SEM-23
+                    p SEM-24 
+                    p SEM-25
+                    p SEM-26
+                .datosResultados__box
+                    p sesión-1
+                    p <?= datoS22S1 ?>
+                    p <?= datoS23S1 ?>
+                    p <?= datoS24S1 ?>
+                    p <?= datoS25S1 ?>
+                    p <?= datoS26S1 ?>
+                .datosResultados__box
+                    p sesión-2
+                    p <?= datoS22S2 ?>
+                    p <?= datoS23S2 ?>
+                    p <?= datoS24S2 ?>
+                    p <?= datoS25S2 ?>
+                    p <?= datoS26S2 ?>
+
+            .datosResultados    <!-- octubre -->
+                h4.datosResultados__title MES: Octubre
+                .datosResultados__box.resaltar__color
+                    p 
+                    p SEM-27
+                    p SEM-28
+                    p SEM-29 
+                    p SEM-30
+                .datosResultados__box
+                    p sesión-1
+                    p <?= datoS27S1 ?>
+                    p <?= datoS28S1 ?>
+                    p <?= datoS29S1 ?>
+                    p <?= datoS30S1 ?>
+                .datosResultados__box
+                    p sesión-2
+                    p <?= datoS27S2 ?>
+                    p <?= datoS28S2 ?>
+                    p <?= datoS29S2 ?>
+                    p <?= datoS30S2 ?>
+
+            .datosResultados    <!-- noviembre -->
+                h4.datosResultados__title MES: Noviembre
+                .datosResultados__box.resaltar__color
+                    p 
+                    p SEM-31
+                    p SEM-32
+                    p SEM-33 
+                    p SEM-34
+                .datosResultados__box
+                    p sesión-1
+                    p <?= datoS31S1 ?>
+                    p <?= datoS32S1 ?>
+                    p <?= datoS33S1 ?>
+                    p <?= datoS34S1 ?>
+                .datosResultados__box
+                    p sesión-2
+                    p <?= datoS31S2 ?>
+                    p <?= datoS32S2 ?>
+                    p <?= datoS33S2 ?>
+                    p <?= datoS34S2 ?>
+
+            .datosResultados    <!-- diciembre -->
+                h4.datosResultados__title MES: Diciembre
+                .datosResultados__box.resaltar__color
+                    p 
+                    p SEM-35
+                    p SEM-36
+                    p SEM-37 
+                .datosResultados__box
+                    p sesión-1
+                    p <?= datoS35S1 ?>
+                    p <?= datoS36S1 ?>
+                    p <?= datoS37S1 ?>
+                .datosResultados__box
+                    p sesión-2
+                    p <?= datoS35S2 ?>
+                    p <?= datoS36S2 ?>
+                    p <?= datoS37S2 ?>
+
+
+
+        .datosEstudiante
+            h4.datosEstudiante__title Resumen de evidencias
+            .datosEstudiante__box
+                p.resaltar__color Total Evidencias:
+                P <?= datoTotalEvidencia ?>
+            .datosEstudiante__box
+                P.resaltar__color Enviado:
+                P <?= datoPorcentEnviado ?>
+            .datosEstudiante__box
+                P.resaltar__color No enviado
+                P <?= datoPorcentNoEnviado ?>

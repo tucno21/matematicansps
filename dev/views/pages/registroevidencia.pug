@@ -1,0 +1,18 @@
+extends ../templates/template
+
+block nav
+    include ../includes/navegador
+
+block header
+    form.formulario(action='https://script.google.com/macros/s/AKfycbwe2ur6663DWk_CPVORrn_Yu4ofhc24F6U5GWFRmA/exec' method='get' target='_blank')
+        h3.formulario__title Login Para ver Registro de Evidencias
+        p.formulario__parrafo Acceso solo para estudiantes ingresar con su DNI y nombres escritas en mayusculas
+        label.formulario__texto DNI
+        input.formulario__input(name='INPUT_DNI' required='' type='number' placeholder='Ingrese su DNI')
+        label.formulario__texto Nombre
+        input.formulario__input(name='INPUT_NAME' required='' type='text' placeholder='Ingrese su Nombre(s)')
+        button.formulario__boton Buscar
+
+
+block footer
+    include ../includes/footer

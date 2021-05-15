@@ -213,6 +213,65 @@ template { display: none; }
 @media (min-width: 768px) { .main__container { grid-template-columns: repeat(2, 1fr); gap: 3.5rem; padding: 5rem 7rem; } }
 
 /*seciones de meses y semanas*/
+.formulario { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; }
+
+.formulario__title { font-size: 2rem; }
+
+.formulario__parrafo { font-size: 2rem; }
+
+.formulario__texto { margin-top: 2rem; font-size: 2rem; text-align: left; font-weight: bold; }
+
+.formulario__input { display: block; width: 80%; height: 2.5rem; border: 2px solid var(--green); font-size: 2rem; padding: 0.8rem 0; border-radius: 1rem; text-align: center; outline: none; }
+
+@media screen and (min-width: 1024px) { .formulario__input { width: 50%; } }
+
+.formulario__boton { margin-top: 2rem; display: block; width: 80%; background-color: var(--green); border: none; font-size: 2.5rem; padding: 1.2rem; border-radius: 1rem; color: var(--white); outline: none; }
+
+@media screen and (min-width: 1024px) { .formulario__boton { width: 50%; }
+  .formulario__boton:hover { background-color: var(--black); } }
+
+.registroNotas__title { text-align: center; font-size: 2rem; }
+
+.datosEstudiante__title { font-size: 2rem; padding: 1rem; text-align: center; }
+
+.datosEstudiante__box { margin: 0 auto; display: flex; align-items: center; width: 90vw; text-align: center; }
+
+.datosEstudiante__box p { font-size: 1.5rem; width: 45%; border: 1px solid var(--green); text-align: center; }
+
+@media screen and (min-width: 1024px) { .datosEstudiante__box { width: 50vw; } }
+
+.NotasSiagie { display: flex; flex-direction: column; text-align: center; }
+
+.NotasSiagie__title { font-size: 2rem; padding: 1rem; text-align: center; }
+
+.NotasSiagie__box { text-align: center; margin: 0 auto; display: flex; align-items: center; width: 90vw; }
+
+.NotasSiagie__box p { text-align: center; font-size: 1.7rem; width: 45%; border: 1px solid var(--green); }
+
+.NotasSiagie__box--competencia { display: block; }
+
+.NotasSiagie__box--competencia h5 { font-size: 1.2rem; font-weight: 300; margin: 0; padding: 0; }
+
+@media screen and (min-width: 1024px) { .NotasSiagie__box { width: 50vw; } }
+
+.datosResultados__container { text-align: center; display: grid; }
+
+@media screen and (min-width: 1024px) { .datosResultados__container { grid-template-columns: repeat(2, 1fr); } }
+
+.datosResultados { text-align: center; }
+
+.datosResultados__title { text-align: center; font-size: 2rem; padding-top: 1.5rem; }
+
+.datosResultados__box { text-align: center; margin: 0 auto; display: flex; align-items: center; width: 90vw; }
+
+.datosResultados__box p { text-align: center; font-size: 1.5rem; width: 45%; border: 1px solid var(--green); padding: .3rem 0; }
+
+@media screen and (min-width: 1024px) { .datosResultados__box { width: 20vw; width: 80%; } }
+
+.resaltar__color { background-color: var(--green); }
+
+.resaltar__color p { border: 1px solid var(--black); }
+
 /*FOOTER*/
 .footer { height: 5vh; width: 100%; background-color: var(--black); color: var(--white); display: flex; align-items: center; justify-content: center; position: relative; font-size: 1.5rem; z-index: 100; }
 
