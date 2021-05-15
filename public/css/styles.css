@@ -236,7 +236,7 @@ template { display: none; }
 
 .datosEstudiante__box { margin: 0 auto; display: flex; align-items: center; width: 90vw; text-align: center; }
 
-.datosEstudiante__box p { font-size: 1.5rem; width: 45%; border: 1px solid var(--green); text-align: center; }
+.datosEstudiante__box p { font-size: 1.5rem; width: 45%; border: 1px solid var(--black); text-align: center; }
 
 @media screen and (min-width: 1024px) { .datosEstudiante__box { width: 50vw; } }
 
@@ -246,7 +246,7 @@ template { display: none; }
 
 .NotasSiagie__box { text-align: center; margin: 0 auto; display: flex; align-items: center; width: 90vw; }
 
-.NotasSiagie__box p { text-align: center; font-size: 1.7rem; width: 45%; border: 1px solid var(--green); }
+.NotasSiagie__box p { text-align: center; font-size: 1.7rem; width: 45%; border: 1px solid var(--black); }
 
 .NotasSiagie__box--competencia { display: block; }
 
@@ -264,11 +264,11 @@ template { display: none; }
 
 .datosResultados__box { text-align: center; margin: 0 auto; display: flex; align-items: center; width: 90vw; }
 
-.datosResultados__box p { text-align: center; font-size: 1.5rem; width: 45%; border: 1px solid var(--green); padding: .3rem 0; }
+.datosResultados__box p { text-align: center; font-size: 1.5rem; width: 45%; border: 1px solid var(--black); padding: .3rem 0; }
 
 @media screen and (min-width: 1024px) { .datosResultados__box { width: 20vw; width: 80%; } }
 
-.resaltar__color { background-color: var(--green); }
+.resaltar__color { background-color: #cf6a87; }
 
 .resaltar__color p { border: 1px solid var(--black); }
 
