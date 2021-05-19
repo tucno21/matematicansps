@@ -7,18 +7,21 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2.5rem;
-    padding: 5rem;
+    padding: 3rem;
+
+    @include laptop{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.5rem;
+        padding: 5rem 7rem;
+    }
 }
 
 .months{
-    /* margin: 1rem; */
     overflow: hidden;
-    border-radius: 1.5rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    
     &__btn{
-        display: grid;
-        place-content: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width:100%;
         padding: 2rem 0;
         background-color: var(--green);
         color: var(--white);
@@ -26,11 +29,16 @@
         font-size: 2.5rem;
         font-weight: bold;
         letter-spacing: .3rem;
-        border-radius: 1.5rem 1.5rem 0 0;
+        border-radius: 1rem 1rem 0 0;
+        cursor: pointer;
+        outline: none;
+        border:none;
         z-index: 1;
 
-        &:hover{
-            color: var(--black);
+        @include laptop{
+            &:hover{
+                color: var(--black);
+            }
         }
     }
 
@@ -38,9 +46,8 @@
         background-color: var(--black);
         position: relative;
         overflow: hidden;
-        transition: max-height .3s;
         max-height: 0;
-        transition: max-height .6s;
+        transition: max-height .4s;
     }
 
     &__link{
@@ -52,20 +59,22 @@
         position: relative;
         font-size: 2rem;
 
-        &::before{
-            content: "";
-            position: absolute;
-            width: 6px;
-            height: 100%;
-            background-color: var(--green);
-            left: 0;
-            top: 0;
-            transition: .3s;
-            opacity: 0;
-        }
-
-        &:hover::before{
-            opacity: 1;
+        @include laptop{
+            &::before{
+                content: "";
+                position: absolute;
+                width: 6px;
+                height: 100%;
+                background-color: var(--green);
+                left: 0;
+                top: 0;
+                transition: .3s;
+                opacity: 0;
+            }
+    
+            &:hover::before{
+                opacity: 1;
+            }
         }
 
         & span{
@@ -73,147 +82,3 @@
         }
     }
 }
-
-.months:target .months__smenu{
-    max-height: 40rem;
-}
-.months:target .months__btn{
-    color: var(--black);
-}
-
-@media (min-width: 768px){
-    .main__container{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3.5rem;
-        padding: 5rem 7rem;
-    }
-}
-
-// @media (min-width: 1280px){
-//     .main__container{
-//         padding: 3rem 5rem;
-//         grid-template-columns: repeat(3, 1fr);
-//     }
-// }
-
-
-
-
-/*seciones de meses y semanas*/
-
-// .main__container{
-//     padding: 0 2rem;
-//     display:flex;
-//     flex-direction: column;
-//     align-items:center;
-// }
-
-// .months{
-//     // border: 1px solid red;
-//     text-align: center;
-//     margin: 2rem 0;
-
-//     @include laptop{
-//         width:70%;
-
-//     }
-    
-//     &__title{
-//         font-size: 2.5rem;
-//         padding: 1rem 0;
-//         text-transform: uppercase;
-//         background-color:#1289A7;
-//         letter-spacing: .3rem;
-//         color: $white;
-//         border-radius:1rem 1rem 0 0;
-//         border-bottom: 2px solid $black;
-//     }
-
-// }
-
-// .semana{
-//     overflow: hidden;
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-//     &__btn{
-//         display: grid;
-//         place-content: center;
-//         background-color: var(--green);
-//         color: var(--white);
-//         position: relative;
-//         padding: 1.6rem 0;
-//         font-size: 2.5rem;
-//         // font-weight: bold;
-//         border-bottom: 2px solid $black;
-
-
-//         &:hover{
-//             color: var(--black);
-//         }
-//     }
-
-//     &__smenu{
-//         background-color: var(--black);
-//         position: relative;
-//         overflow: hidden;
-//         max-height: 0;
-//         transition: max-height .6s;
-//     }
-
-//     &__contenido{
-//         display: block;
-//         padding: 1rem 0;
-//         color: var(--white);
-//         font-size: 1rem;
-//         margin: .4rem 0;
-//         position: relative;
-//         font-size: 2rem;
-//     }
-// }
-
-
-// .semana{
-//     &__sesion,
-//     &__title,
-//     &__descarga{
-//         color: var(--white);
-//         font-size:2rem;
-//         display:block;
-//     }
-
-//     &__sesion{
-//         color: #f39c12;
-//         font-size:2.6rem;
-//         margin-top: 1.5rem;
-//     }
-
-//     &__descarga:hover{
-//         color: #f39c12;
-//     }
-
-//     &__video{
-//         width:98%;
-//         height:22rem;
-
-//         @include laptop{
-//             width:60%;
-//             height:35rem;
-//         }
-//     }
-
-//     &__img{
-//         width:90%;
-//         @include laptop{
-//             width:50%;
-//         }
-//     }
-
-// }
-
-// .semana:target .semana__smenu{
-//     max-height: 300rem;
-// }
-// .semana:target .semana__btn{
-//     color: var(--black);
-// }
-

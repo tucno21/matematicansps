@@ -7,67 +7,23 @@ function iniciarApp() {
     comprobarNOMBRE();
 }
 
-const toggle = document.getElementById('toggle');
-const navbarx = document.getElementById('navbarx');
+const menu_box = document.querySelector('.nav__menu');
+const toggle = document.querySelector('#toggle');
+const menu_container = document.querySelector('.nav__menu-contenedor');
 
-const nav__menu1 = document.getElementById('nav__menu1');
-const nav__menu2 = document.getElementById('nav__menu2');
-const nav__menu3 = document.getElementById('nav__menu3');
-const nav__menu4 = document.getElementById('nav__menu4');
-//======MODO ISCURO
-const btnSwitch = document.querySelector('#switch')
+document.onclick = function (e) {
+    if (e.target.id !== 'menu_box' && e.target.id !== 'toggle' && e.target.id !== 'menu_container') {
+        toggle.classList.remove('active');
+        menu_container.classList.remove('active');
+    }
+}
 
 toggle.onclick = function () {
-    toggle.classList.toggle('activador');
-    navbarx.classList.toggle('activador');
+    toggle.classList.toggle('active');
+    menu_container.classList.toggle('active');
 }
 
-nav__menu1.onclick = function () {
-    toggle.classList.remove('activador');
-    navbarx.classList.remove('activador');
-}
-nav__menu2.onclick = function () {
-    toggle.classList.remove('activador');
-    navbarx.classList.remove('activador');
-}
-nav__menu3.onclick = function () {
-    toggle.classList.remove('activador');
-    navbarx.classList.remove('activador');
-}
-nav__menu4.onclick = function () {
-    toggle.classList.remove('activador');
-    navbarx.classList.remove('activador');
-}
-
-//======MODO ISCURO
-// const btnSwitch = document.querySelector('#switch')
-
-// btnSwitch.addEventListener('click',()=>{
-btnSwitch.onclick = function () {
-    document.body.classList.toggle('dark');
-    btnSwitch.classList.toggle('active');
-
-    //guardarmos el modo oscuro en localstorage.
-    if(document.body.classList.contains('dark')){
-        localStorage.setItem('dark-mode', 'true');
-
-    }else{
-        localStorage.setItem('dark-mode', 'false');
-    }
-
-};
-
-//obtenemos el modo actualizar
-if(localStorage.getItem('dark-mode') === 'true'){
-    document.body.classList.add('dark');
-    btnSwitch.classList.add('active');
-}else{
-    document.body.classList.remove('dark');
-    btnSwitch.classList.remove('active');
-}
-
-
-
+//==========================
 function comprobarDNI() {
     let validarDNI = document.getElementById("numeroDNI");
     let errorMsg = document.getElementById("error-msg1");
@@ -112,5 +68,19 @@ function comprobarNOMBRE(){
         }
 
         // console.log(e.target.value.length);
+    });
+}
+
+const abrirContent = document.getElementsByClassName("months__btn");
+
+for (let i = 0; i < abrirContent.length; i++) {
+    abrirContent[i].addEventListener("click", function () {
+        this.classList.toggle("abrir");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
     });
 }

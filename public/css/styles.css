@@ -120,30 +120,34 @@ template { display: none; }
 /** Add the correct display in IE 10. */
 [hidden] { display: none; }
 
-.nav { display: flex; flex-direction: column; font-size: 1.5rem; position: fixed; width: 100%; top: 0; left: 0; z-index: 100; }
+.nav__menu { position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; width: 100%; box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5); background-color: var(--green); z-index: 1000; }
 
-@media screen and (min-width: 1024px) { .nav { flex-direction: row; justify-content: space-between; background-color: var(--green); box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5); } }
+.nav__menu-logo { color: var(--white); font-weight: bold; font-size: 3.5rem; padding: 1rem; }
 
-.nav__menu { font-weight: bold; font-size: 3.5rem; color: var(--white); }
+.nav__menu-contenedor { position: fixed; background-color: var(--green); transform: translatex(100%); top: 6.3rem; right: 0; width: 100%; transition: .3s; display: flex; justify-content: center; align-items: center; flex-direction: column; height: calc(100vh - 6.3rem); }
 
-.nav__menu-a { display: flex; justify-content: space-between; padding: 1rem; background-color: var(--green); box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5); }
+.nav__menu-contenedor.active { transform: translatex(0); }
 
-@media screen and (min-width: 1024px) { .nav__menu-a { padding: 1rem 4rem; box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0); } }
+@media screen and (min-width: 1024px) { .nav__menu-contenedor { transform: translatex(0); height: auto; width: auto; flex-direction: row; position: relative; top: 0; } }
 
-.nav__menu-logo { color: var(--white); text-decoration: none; display: flex; align-items: center; }
+.nav__menu-link { color: var(--white); padding: 2rem 0; font-size: 3.5rem; letter-spacing: 2px; border-bottom: 1px solid var(--white); }
 
-@media screen and (min-width: 1024px) { .nav__menu-show { display: none; } }
+@media screen and (min-width: 1024px) { .nav__menu-link { font-size: 2rem; padding: 1.5rem; letter-spacing: 0; border: 0; }
+  .nav__menu-link:hover { border: 1px solid var(--white); border-radius: 10px 0 10px 0; transition: background-color .4s; background-color: rgba(255, 255, 255, 0.3); color: var(--green); } }
 
-.nav__menu-b { font-size: 2.8rem; height: 25vh; background-color: var(--green); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; transition: transform .3s; transform: translateX(100%); }
+.toggle { width: 5.5rem; height: 5.8rem; display: flex; justify-content: center; align-items: center; }
 
-@media screen and (min-width: 1024px) { .nav__menu-b { transform: translateX(0); flex-direction: row; height: auto; font-size: 2rem; } }
+@media screen and (min-width: 1024px) { .toggle { display: none; } }
 
-.nav__menu-link { color: var(--white); padding: 1.5rem; text-decoration: none; font-weight: 400; width: 100%; text-align: center; border-bottom: 1px solid var(--white); }
+.toggle_linea { display: flex; justify-content: center; align-items: center; background-color: var(--white); width: 3rem; height: .3rem; }
 
-@media screen and (min-width: 1024px) { .nav__menu-link { display: flex; justify-content: center; align-items: center; padding: 0 2rem; border-bottom: 0px solid var(--white); }
-  .nav__menu-link:hover { border-radius: 10px 0 10px 0; height: 5rem; transition: background-color .5s; background-color: rgba(255, 255, 255, 0.3); color: var(--green); } }
+.toggle_linea::before { content: ""; position: absolute; width: 3rem; height: .3rem; background: var(--white); transform: translateY(-1rem); transition: .2s; }
 
-.nav__menu-b.activador { transition: transform .3s; transform: translate(0); }
+.toggle_linea::after { content: ""; position: absolute; width: 3rem; height: .3rem; background: var(--white); transform: translateY(1rem); transition: .2s; }
+
+.toggle.active .toggle_linea::before { transform: translateY(0) rotate(45deg); }
+
+.toggle.active .toggle_linea::after { transform: translateY(0) rotate(-45deg); }
 
 .switch { background-color: #343d5b; border-radius: 10px; border: none; position: relative; cursor: pointer; display: flex; outline: none; left: 1rem; }
 
@@ -188,31 +192,25 @@ template { display: none; }
 /*=========================*/
 /* MAIN */
 /*seciones de meses y semanas*/
-.main__container { display: grid; grid-template-columns: repeat(1, 1fr); gap: 2.5rem; padding: 5rem; }
+.main__container { display: grid; grid-template-columns: repeat(1, 1fr); gap: 2.5rem; padding: 3rem; }
 
-.months { /* margin: 1rem; */ overflow: hidden; border-radius: 1.5rem; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+@media screen and (min-width: 1024px) { .main__container { grid-template-columns: repeat(2, 1fr); gap: 3.5rem; padding: 5rem 7rem; } }
 
-.months__btn { display: grid; place-content: center; padding: 2rem 0; background-color: var(--green); color: var(--white); position: relative; font-size: 2.5rem; font-weight: bold; letter-spacing: .3rem; border-radius: 1.5rem 1.5rem 0 0; z-index: 1; }
+.months { overflow: hidden; }
 
-.months__btn:hover { color: var(--black); }
+.months__btn { box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); width: 100%; padding: 2rem 0; background-color: var(--green); color: var(--white); position: relative; font-size: 2.5rem; font-weight: bold; letter-spacing: .3rem; border-radius: 1rem 1rem 0 0; cursor: pointer; outline: none; border: none; z-index: 1; }
 
-.months__smenu { background-color: var(--black); position: relative; overflow: hidden; transition: max-height .3s; max-height: 0; transition: max-height .6s; }
+@media screen and (min-width: 1024px) { .months__btn:hover { color: var(--black); } }
+
+.months__smenu { background-color: var(--black); position: relative; overflow: hidden; max-height: 0; transition: max-height .4s; }
 
 .months__link { display: block; padding: 16px 26px; color: var(--white); font-size: 14px; margin: .4rem 0; position: relative; font-size: 2rem; }
 
-.months__link::before { content: ""; position: absolute; width: 6px; height: 100%; background-color: var(--green); left: 0; top: 0; transition: .3s; opacity: 0; }
-
-.months__link:hover::before { opacity: 1; }
+@media screen and (min-width: 1024px) { .months__link::before { content: ""; position: absolute; width: 6px; height: 100%; background-color: var(--green); left: 0; top: 0; transition: .3s; opacity: 0; }
+  .months__link:hover::before { opacity: 1; } }
 
 .months__link span { color: #f39c12; }
 
-.months:target .months__smenu { max-height: 40rem; }
-
-.months:target .months__btn { color: var(--black); }
-
-@media (min-width: 768px) { .main__container { grid-template-columns: repeat(2, 1fr); gap: 3.5rem; padding: 5rem 7rem; } }
-
-/*seciones de meses y semanas*/
 .formulario { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; }
 
 .formulario__title { font-size: 2rem; }
