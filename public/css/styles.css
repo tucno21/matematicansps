@@ -219,9 +219,11 @@ template { display: none; }
 
 .formulario__parrafo { font-size: 2rem; }
 
+.formulario__boxInput { display: flex; align-items: center; justify-content: center; width: 90%; }
+
 .formulario__texto { margin-top: 2rem; font-size: 2rem; text-align: left; font-weight: bold; }
 
-.formulario__input { display: block; width: 80%; height: 2.5rem; border: 2px solid var(--green); font-size: 2rem; padding: 0.8rem 0; border-radius: 1rem; text-align: center; outline: none; }
+.formulario__input { display: block; height: 2.5rem; border: 2px solid var(--green); font-size: 2rem; padding: .8rem 0; border-radius: 1rem; text-align: center; outline: none; }
 
 @media screen and (min-width: 1024px) { .formulario__input { width: 50%; } }
 
@@ -229,6 +231,10 @@ template { display: none; }
 
 @media screen and (min-width: 1024px) { .formulario__boton { width: 50%; }
   .formulario__boton:hover { background-color: var(--black); } }
+
+#icon1, #icon2 { font-size: 2.5rem; padding-left: .5rem; }
+
+#error-msg1, #error-msg2 { display: none; color: #FF0000; font-size: 1.6rem; margin-top: .5rem; }
 
 .registroNotas__title { text-align: center; font-size: 2rem; }
 

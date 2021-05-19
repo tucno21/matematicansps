@@ -1,64 +1,83 @@
-.formulario {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+.formulario{
+    height:90vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:2rem;
 
-  @include laptop {
-    // width: 50vw;
-  }
-
-  &__title {
-    font-size: 2rem;
-  }
-
-  &__parrafo {
-    font-size: 2rem;
-  }
-
-  &__texto {
-    margin-top: 2rem;
-    font-size: 2rem;
-    text-align: left;
-    font-weight: bold;
-  }
-
-  &__input {
-    display: block;
-    width: 80%;
-    height: 2.5rem;
-    border: 2px solid $green;
-    font-size: 2rem;
-    padding: 0.8rem 0;
-    border-radius: 1rem;
-    text-align: center;
-    outline: none;
-
-    @include laptop {
-      width: 50%;
+    @include laptop{
+        // width: 50vw;
     }
-  }
 
-  &__boton {
-    margin-top: 2rem;
-    display: block;
-    width: 80%;
-    background-color: $green;
-    border: none;
+    &__title{
+        font-size:2rem;
+    }
+
+    &__parrafo{
+        font-size:2rem;
+    }
+
+    &__boxInput{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        width:90%;
+    }
+
+    &__texto{
+        margin-top:2rem;
+        font-size:2rem;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    &__input{
+        display:block;
+        // width:70%;
+        height:2.5rem;
+        border:2px solid $green;
+        font-size:2rem;
+        padding:.8rem 0;
+        border-radius: 1rem;
+        text-align: center;
+        outline: none;
+
+        @include laptop{
+            width:50%;
+        }
+    }
+
+    &__boton{
+        margin-top:2rem;
+        display:block;
+        width:80%;
+        background-color:$green;
+        border:none;
+        font-size:2.5rem;
+        padding: 1.2rem;
+        border-radius: 1rem;
+        color: $white;
+        outline: none;
+
+        @include laptop{
+            width:50%;
+
+            &:hover{
+                background-color:$black;
+            }
+        }
+    }
+}
+
+#icon1, #icon2 {
     font-size: 2.5rem;
-    padding: 1.2rem;
-    border-radius: 1rem;
-    color: $white;
-    outline: none;
+    padding-left: .5rem;
+}
 
-    @include laptop {
-      width: 50%;
-
-      &:hover {
-        background-color: $black;
-      }
-    }
-  }
+#error-msg1, #error-msg2 {
+    display: none;
+    color: #FF0000;
+    font-size: 1.6rem;
+    margin-top: .5rem;
 }

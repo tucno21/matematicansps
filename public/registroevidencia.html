@@ -19,13 +19,21 @@
       <div class="nav__menu nav__menu-b" id="navbarx"><a class="nav__menu-link" id="nav__menu1" href="/">Inicio</a><a class="nav__menu-link" id="nav__menu2" href="registroevidencia.html">Registro </a><a class="nav__menu-link" id="nav__menu3" href="#">Evaluación </a></div>
     </nav>
     <header class="header" id="header">
-      <form class="formulario" action="https://script.google.com/macros/s/AKfycbwe2ur6663DWk_CPVORrn_Yu4ofhc24F6U5GWFRmA/exec" method="get" target="_blank">
+      <form class="formulario" action="https://script.google.com/macros/s/AKfycbzt9L-pBSCKanO7ZmjRqqLdGZB1t_tiraWegKu8RQ/exec" method="get" target="_blank">
         <h3 class="formulario__title">Login Para ver Registro de Evidencias</h3>
         <p class="formulario__parrafo">Acceso solo para estudiantes ingresar con su DNI y nombres escritas en mayusculas</p>
-        <label class="formulario__texto">DNI</label>
-        <input class="formulario__input" name="INPUT_DNI" required="" type="number" placeholder="Ingrese su DNI">
-        <label class="formulario__texto">Nombre</label>
-        <input class="formulario__input" name="INPUT_NAME" required="" type="text" placeholder="Ingrese su Nombre(s)">
+        <label class="formulario__texto" for="numeroDNI">DNI</label>
+        <div class="formulario__boxInput">
+          <input class="formulario__input" id="numeroDNI" name="INPUT_DNI" required="" type="number" placeholder="Ingrese su DNI">
+          <div id="icon1"></div>
+        </div>
+        <p id="error-msg1">el DNI tiene 8 digitos</p>
+        <label class="formulario__texto" for="nombremayu">Nombre</label>
+        <div class="formulario__boxInput">
+          <input class="formulario__input" id="nombremayu" name="INPUT_NAME" required="" type="text" placeholder="Ingrese su Nombre(s)">
+          <div id="icon2"></div>
+        </div>
+        <p id="error-msg2">más de tres caracteres, nombre(s) completo, en mayúscula y sin tildes</p>
         <button class="formulario__boton">Buscar</button>
       </form>
     </header>

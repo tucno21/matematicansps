@@ -4,13 +4,19 @@ block nav
     include ../includes/navegador
 
 block header
-    form.formulario(action='https://script.google.com/macros/s/AKfycbwe2ur6663DWk_CPVORrn_Yu4ofhc24F6U5GWFRmA/exec' method='get' target='_blank')
+    form.formulario(action='https://script.google.com/macros/s/AKfycbzt9L-pBSCKanO7ZmjRqqLdGZB1t_tiraWegKu8RQ/exec' method='get' target='_blank')
         h3.formulario__title Login Para ver Registro de Evidencias
         p.formulario__parrafo Acceso solo para estudiantes ingresar con su DNI y nombres escritas en mayusculas
-        label.formulario__texto DNI
-        input.formulario__input(name='INPUT_DNI' required='' type='number' placeholder='Ingrese su DNI')
-        label.formulario__texto Nombre
-        input.formulario__input(name='INPUT_NAME' required='' type='text' placeholder='Ingrese su Nombre(s)')
+        label.formulario__texto(for='numeroDNI') DNI
+        .formulario__boxInput
+            input#numeroDNI.formulario__input(name='INPUT_DNI' required='' type='number' placeholder='Ingrese su DNI')
+            #icon1
+        p#error-msg1 el DNI tiene 8 digitos
+        label.formulario__texto(for='nombremayu') Nombre
+        .formulario__boxInput
+            input#nombremayu.formulario__input(name='INPUT_NAME' required='' type='text' placeholder='Ingrese su Nombre(s)')
+            #icon2
+        p#error-msg2 más de tres caracteres, nombre(s) completo, en mayúscula y sin tildes
         button.formulario__boton Buscar
 
 

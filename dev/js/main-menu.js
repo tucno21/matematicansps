@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function () {
+    iniciarApp();
+})
+
+function iniciarApp() {
+    comprobarDNI();
+    comprobarNOMBRE();
+}
+
 const toggle = document.getElementById('toggle');
 const navbarx = document.getElementById('navbarx');
 
@@ -55,4 +64,53 @@ if(localStorage.getItem('dark-mode') === 'true'){
 }else{
     document.body.classList.remove('dark');
     btnSwitch.classList.remove('active');
+}
+
+
+
+function comprobarDNI() {
+    let validarDNI = document.getElementById("numeroDNI");
+    let errorMsg = document.getElementById("error-msg1");
+    let icon = document.getElementById("icon1");
+    
+    validarDNI.addEventListener('input', () => {
+        if (validarDNI.value.length === 8) {
+            icon.innerHTML = '<i class="fas fa-check-circle"></i>';
+            icon.style.color = '#B53471';
+            errorMsg.style.display = 'none';
+            validarDNI.style.border = '2px solid #B53471';
+        } else {
+            icon.innerHTML = '<i class="fas fa-exclamation-circle"></i>';
+            icon.style.color = '#FF0000';
+            errorMsg.style.display = 'block';
+            validarDNI.style.border = '2px solid #FF0000';
+        }
+
+        // console.log(e.target.value.length);
+    });
+
+
+};
+
+function comprobarNOMBRE(){
+    let nombremayu = document.getElementById("nombremayu");
+    let errorMsg = document.getElementById("error-msg2");
+    let icon = document.getElementById("icon2");
+    let mayuscula = /^[A-ZÑ\s]+$/
+    
+    nombremayu.addEventListener('input', () => {
+        if (nombremayu.value.length > 3 && nombremayu.value == nombremayu.value.match(mayuscula)) {
+            icon.innerHTML = '<i class="fas fa-check-circle"></i>';
+            icon.style.color = '#B53471';
+            errorMsg.style.display = 'none';
+            nombremayu.style.border = '2px solid #B53471';
+        } else {
+            icon.innerHTML = '<i class="fas fa-exclamation-circle"></i>';
+            icon.style.color = '#FF0000';
+            errorMsg.style.display = 'block';
+            nombremayu.style.border = '2px solid #FF0000';
+        }
+
+        // console.log(e.target.value.length);
+    });
 }
